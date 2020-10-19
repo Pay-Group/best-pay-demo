@@ -98,7 +98,7 @@ public class PayController {
     public RefundResponse refund(@RequestParam String orderId) {
         RefundRequest request = new RefundRequest();
         request.setOrderId(orderId);
-        request.setPayTypeEnum(BestPayTypeEnum.WXPAY_MWEB);
+        request.setPayPlatformEnum(BestPayPlatformEnum.WX);
         request.setOrderAmount(0.1);
         RefundResponse response = bestPayService.refund(request);
         return response;
