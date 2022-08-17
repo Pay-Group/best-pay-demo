@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label for="amount">金额</label>
-                            <input type="text" value="0.1" class="form-control" id="amount" name="amount"/>
+                            <input type="text" value="0.01" class="form-control" id="amount" name="amount"/>
                         </div>
                         <div class="form-group">
                             <label for="amount">支付方式</label>
@@ -30,6 +30,7 @@
                                 <option value="ALIPAY_PC">支付宝PC</option>
                                 <option value="ALIPAY_WAP">支付宝WAP</option>
                                 <option value="ALIPAY_H5">支付宝H5</option>
+                                <option value="ALIPAY_APP">支付宝APP</option>
                                 <option value="WXPAY_NATIVE">微信Native支付</option>
                                 <option value="WXPAY_MWEB">微信H5支付</option>
                                 <option value="WXPAY_MP">微信公众号支付</option>
@@ -142,6 +143,10 @@
                             case 'ALIPAY_H5':
                                 console.log(response.body)
                                 $('#result').html("h5发起支付文档 https://myjsapi.alipay.com/alipayjsapi/util/pay/tradePay.html")
+                                break
+                            case 'ALIPAY_APP':
+                                console.log(response.body)
+                                $('#result').html(response.body)
                                 break
                         }
                     },
